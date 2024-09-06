@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #DCF2F1; /* Light Background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #FFFFFF; /* White background for the form */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.image-container {
+    flex: 1 1 350px;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    background-color: #7FC7D9; /* Medium Blue Background for Images */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.image-container img.active {
+    opacity: 1;
+}
+
+.form-container {
+    flex: 1 1 450px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8; /* Off-White Background for the Form */
+}
+
+h1 {
+    font-family: 'Montserrat', serif;
+    color: #0F1035; /* Dark Blue for Headings */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-family: 'Montserrat', serif;
+    color: #365486; /* Medium Dark Blue for Subheadings */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.social-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 18px;
+    border: 2px solid #7FC7D9; /* Border matches image container */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #DCF2F1; /* Light Blue for Social Buttons */
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.social-btn:hover {
+    background-color: #7FC7D9; /* Hover matches medium blue */
+}
+
+.divider {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+}
+
+.divider span {
+    background: #F8F8F8; /* Off-White Background for the Divider */
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.divider:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #365486; /* Medium Dark Blue for Divider Line */
+    top: 50%;
+    left: 0;
+    z-index: 0;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0F1035; /* Dark Blue for Labels */
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #7FC7D9; /* Border to match the theme */
+    border-radius: 5px;
+    background-color: #FFF; /* White background for input fields */
+    font-family: 'Nunito';
+    font-weight: 600;
+}
+
+input:focus {
+    border-color: #0F1035; /* Dark Blue Border on Focus */
+    outline: none; /* Remove default outline */
+}
+
+input.error {
+    border-color: #FF4D4D; /* Red border for errors */
+    background-color: #FFEBEB; /* Light red background for errors */
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #7FC7D9; /* Border to match the theme */
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #365486; /* Medium Dark Blue for Icons */
+}
+
+.password-toggle i {
+    display: inline;
+    transition: color 0.3s ease;
+}
+
+.password-toggle i:hover {
+    color: #0F1035; /* Dark Blue on Hover */
+}
+
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #365486; /* Medium Dark Blue for Forgot Password Link */
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #0F1035; /* Dark Blue for Button */
+    color: #FFFFFF; /* White Text on Button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Montserrat', serif;
+    font-weight: 510;
+}
+
+button:hover {
+    background-color: #365486; /* Medium Dark Blue on Hover */
+}
+
+p {
+    text-align: center;
+    color: #777; /* Slightly dark text for supporting text */
+    font-size: 0.9rem;
+}
+
+a {
+    color: #0F1035; /* Dark Blue for Links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .form-container {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
